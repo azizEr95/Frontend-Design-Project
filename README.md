@@ -17,6 +17,4 @@ git clone https://github.com/dein-nutzername/dein-repo.git
 ## Webseite besuchen
 
 Unter diesem Link: 
-```bash
 https://azizer95.github.io/Frontend-Design-Project/
-```
