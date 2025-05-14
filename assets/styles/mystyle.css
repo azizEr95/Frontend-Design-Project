@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* genutzte Farbtoene */
+    --first-color: #e7eaf6;
+    --second-color: #c9d1f6;
+    --third-color: #5a7fb6; 
+    --fourth-color: #185489; 
+
+    --font-base: 1rem;
+
+}
+
+* {
+    font-family: 'Segoe UI', 'Gill Sans', 'Helvetica Neue', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5rem;
+}
+
+body > * {
+    text-align: center;
+}
+
+body > :nth-child(2) {
+    background-color: var(--second-color);
+}
+
+header {
+    background-color: var(--third-color);
+}
+
+header h2 {
+    background-color: var(--first-color);
+}
+
+nav > ul {
+    list-style: none;
+}
+
+nav a:hover {
+    color: var(--fourth-color);
+}
+
+article {
+    background-color: var(--first-color)
+}
+
+article h2 {
+    background-color: var(--second-color);
+}
+
+p {
+    font-size: 1.2rem;
+    text-align: justify;
+    padding: 0 5rem;
+}
+
+img {
+    border: 10px solid var(--third-color);
+    width: 60%;
+    height: 60%;
+    max-width: 100%;
+    max-height: 100%;
+}
+  
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+}
+  
+th, td {
+    border: 2px solid var(--fourth-color);
+    padding: 0.7rem;
+}
+  
+thead {
+    background-color: var(--third-color);
+}
+
+select {
+    font-size: var(--font-base);
+}
+
+input, textarea {
+    padding: 0.3rem;
+    font-size: var(--font-base);
+    border-radius: 5px;
+    border: 1px solid var(--third-color);
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 0.3rem 0.5rem;
+    font-size: var(--font-base);
+    background-color: var(--third-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: var(--fourth-color);
+}
+
+#formular {
+    padding: 10px;
+}
+  

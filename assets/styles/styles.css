@@ -1,0 +1,96 @@
+/* 
+Vereinbaren Sie das box-sizing.
+Grundlage für die Blockelement, border-box für die einfache berechnung
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --basic-font-size: 16px;
+    --basic-image-size: 100%;
+    --best-color: #ff0000;
+    --italic-look: italic;
+    --bold-look: bold;
+
+    /*Legen Sie einen relativen Schriftenaufbau an.*/
+    --font-base: 1rem;
+    --font-medium: 1.25rem;
+    --font-large: 1.5rem;
+    --font-xlarge: 2rem;
+
+
+}
+header * {
+    color: var(--best-color);
+}
+/*Legen Sie einen relativen Schriftenaufbau an.*/
+p {
+    font-size: var(--font-xlarge);
+}
+
+h2 {
+    font-size: var(--font-large);
+}
+
+p {
+    background-color: #99CC32; /*yellowgreen*/
+    color: black;
+    font-size: var(--font-base);
+}
+
+li {
+    font-size: var(--font-medium);
+}
+/**/
+
+img {
+    max-width: var(--basic-image-size);
+}
+
+p::first-line {
+    font-weight: bold;
+}
+
+/*
+Finden Sie mindestens 5 verschiedene strukturelle Pseudoklassen.
+*/
+header:hover {
+    background-color: #003321;
+}
+
+li:active {
+    border: 2px solid #303212;
+}
+
+form:invalid {
+    background-color: var(--best-color);
+}
+
+form:valid {
+    background-color: #30db41;
+}
+
+article :nth-of-type(2) {
+    text-decoration: underline;
+}
+
+.tabelle {
+    background-color: #c3dc07;
+}
+
+nav a:hover {
+    color: var(--best-color);
+}
+
+input[type="number"] {
+    width: 25%;
+    text-align: right;
+}
+
+#einleitung {
+    font-style: var(--italic-look);
+}

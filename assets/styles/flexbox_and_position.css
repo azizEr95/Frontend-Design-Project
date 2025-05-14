@@ -1,0 +1,40 @@
+body {
+    display: flex; /*definiere es als flexibles Container-Element*/
+    flex-direction: column; /*alle Kinder von body werden vertikal angeordnet*/
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background: hsl(0 0% 100%);
+    z-index: 2;
+}
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#formular {
+    display: flex;
+    flex-direction: column; /* Vertikale Ausrichtung der Formularfelder */
+    padding: 10px;
+}
+
+
+
+article {
+    position: relative; /* Referenzpunkt für die Positionierung des Bildes */
+}
+
+/* Das Bild mit position: absolute */
+article img {
+    position: absolute;
+    left: 0; /* Bild immer links im Container */
+    width: 35%; /* Bild nimmt 25% der Containerbreite ein */
+    max-block-size: 90%;
+}
+
+article div {
+    margin-left: 35%;
+    margin-bottom: 10%;
+}
