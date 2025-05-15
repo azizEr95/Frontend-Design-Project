@@ -11,16 +11,9 @@ nav {
 }
 nav ul {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-
-#formular {
-    display: flex;
-    flex-direction: column; /* Vertikale Ausrichtung der Formularfelder */
-    padding: 10px;
-}
-
-
 
 article {
     position: relative; /* Referenzpunkt für die Positionierung des Bildes */
@@ -30,11 +23,17 @@ article {
 article img {
     position: absolute;
     left: 0; /* Bild immer links im Container */
-    width: 35%; /* Bild nimmt 25% der Containerbreite ein */
+    width: 35%;
     max-block-size: 90%;
 }
 
 article div {
     margin-left: 35%;
     margin-bottom: 10%;
+}
+
+#formular {
+    display: flex;
+    flex-direction: column; /* Vertikale Ausrichtung der Formularfelder */
+    padding: 10px;
 }
