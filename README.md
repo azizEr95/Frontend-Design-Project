@@ -1,4 +1,4 @@
-# Frontend-Projekt – Aziz Erol
+# Frontend-Design Projekt
 
 Dieses Projekt ist eine einfache Webseite, in der ich die Technologien lerne. 
 
