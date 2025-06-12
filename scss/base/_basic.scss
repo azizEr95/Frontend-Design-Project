@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/***** Bilder ****/
+img {
+    max-width: 100%;
+}
+
+/***** Verlinkungen ****/
+a {
+    text-decoration: none;
+}
+
+/***** Tabellen ****/
+table {
+    margin: auto;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+  
+th, td {
+    border: 2px solid black;
+    padding: 0.5rem;
+}
+
+/***** Elemente innerhalb von Form-Elemente ****/
+input, textarea, select, button {
+    font-size: 1rem;
+    border: 0.5px solid black;
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+    outline: none;
+}
+
+legend, label {
+    margin-left: 1rem;
+}

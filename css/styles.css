@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/***** Bilder ****/
+img {
+  max-width: 100%;
+}
+
+/***** Verlinkungen ****/
+a {
+  text-decoration: none;
+}
+
+/***** Tabellen ****/
+table {
+  margin: auto;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+th, td {
+  border: 2px solid black;
+  padding: 0.5rem;
+}
+
+/***** Elemente innerhalb von Form-Elemente ****/
+input, textarea, select, button {
+  font-size: 1rem;
+  border: 0.5px solid black;
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  outline: none;
+}
+
+legend, label {
+  margin-left: 1rem;
+}
+
+html {
+  /* empfohlene barrierefreie Schriftart: Open Sans */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5rem;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.25;
+  margin: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 1rem;
+  max-width: 95%;
+}
+
+/***** Navigation ****/
+nav > * {
+  list-style: none;
+  margin: 1.5rem;
+  line-height: 1.5;
+  gap: 0.8rem;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background: hsl(0, 0%, 100%);
+  z-index: 2;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#einleitung > div {
+  display: flex;
+  flex-flow: row wrap;
+}
+#einleitung > div * {
+  flex: 1 0 30em;
+}
+
+#tyson > div {
+  display: flex;
+  flex-flow: row wrap;
+}
+#tyson > div * {
+  flex: 1 0 30em;
+}
+
+#foreman > div {
+  display: flex;
+  flex-flow: row wrap;
+}
+#foreman > div * {
+  flex: 1 0 30em;
+}
+
+#haft > div {
+  display: flex;
+  flex-flow: row wrap;
+}
+#haft > div * {
+  flex: 1 0 30em;
+}
+
+#ali > div {
+  display: flex;
+  flex-flow: row wrap;
+}
+#ali > div * {
+  flex: 1 0 30em;
+}
+
+#formular {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+a:hover {
+  color: hsl(228, 50%, 59%);
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=styles.css.map */

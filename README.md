@@ -1,12 +1,12 @@
 # Frontend-Projekt – Aziz Erol
 
-Dieses Projekt ist eine einfache Webseite, in der ich die Technologien lerne. 
+Dieses Projekt ist eine einfache Webseite, in der ich versuche die Front End Web Design Technologien zu lernen. 
 
 ## Technologien
 - HTML
 - CSS
+- Sass
 - JavaScript (bald)
-- Sass (bald)
 
 ## Installation
 1. Projekt clonen:
