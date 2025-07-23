@@ -1,0 +1,115 @@
+@use "../base/variables";
+@use "../module/mixins";
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: variables.$dark-fourth-color;
+    }
+
+    header {
+        background-color: variables.$dark-second-color;
+    }
+
+    nav {
+        background-color: variables.$dark-fourth-color;
+    }
+
+    article {
+        background-color: variables.$dark-third-color;
+
+        div {
+            background-color: variables.$dark-second-color;
+        }
+
+        h2 {
+            background-color: variables.$dark-second-color;
+        }
+    }
+
+    img {
+        border: variables.$dark-third-color;
+    }
+
+    nav a {
+        background-color: variables.$dark-second-color;
+        color: variables.$dark-fourth-color;
+        transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        display: inline-block;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+        color: variables.$dark-fourth-color;
+        transform: scale(1.2);
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.15);
+    }
+
+    .tabelle {
+        table {
+            background-color: variables.$dark-first-color;
+        }
+
+        th,
+        td {
+            color: variables.$dark-fourth-color;
+            background-color: variables.$dark-second-color;
+        }
+
+        thead {
+            background-color: variables.$dark-third-color;
+        }
+
+        td::before {
+            color: variables.$dark-fourth-color;
+        }
+
+        a {
+
+            background-color: variables.$dark-second-color;
+            color: variables.$dark-fourth-color;
+        }
+    }
+
+    #formular {
+        background-color: variables.$dark-first-color;
+        @include mixins.border(0.125rem, variables.$dark-third-color, solid, 0.625rem);
+
+        form {
+            fieldset {
+                legend {
+                    color: variables.$dark-fourth-color;
+                }
+
+                label {
+                    color: variables.$dark-fourth-color;
+                }
+            }
+
+            input {
+                background-color: variables.$dark-third-color;
+                color: variables.$dark-first-color;
+
+                &[type="text"],
+                &[type="number"],
+                &[type="email"] {
+                    border: 1px solid variables.$dark-fourth-color;
+                }
+
+                &[type="submit"],
+                &[type="reset"] {
+                    @include mixins.button(2%, 4%, 80%, black, variables.$dark-second-color);
+                }
+            }
+        }
+
+        input::placeholder {
+            color: variables.$dark-first-color;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: variables.$dark-fourth-color;
+            color: black;
+        }
+    }
+}

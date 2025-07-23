@@ -1,0 +1,34 @@
+@use "../base/variables";
+
+
+@mixin flex-row-wrap($child-flex: 1 0 30em,  $direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    flex-flow: row wrap;
+
+    > * {
+        flex: $child-flex;
+    }
+}
+
+@mixin border($width, $color, $style: solid, $radius:0px) {
+    border: $width;
+    border-style: $style;
+    border-color: $color;
+    border-radius: $radius;
+}
+
+@mixin button($margin, $padding, $width, $color, $bgColor) {
+    margin: $margin;
+    padding: $padding;
+    font-size: 1em;
+    border: none;
+    border-radius: 0.75rem;
+    width: $width;
+    color: $color;
+    background-color: $bgColor;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}

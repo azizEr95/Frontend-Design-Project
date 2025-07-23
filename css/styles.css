@@ -24,14 +24,14 @@ table {
 }
 
 th, td {
-  border: 2px solid black;
+  border: 0.125rem solid black;
   padding: 0.5rem;
 }
 
 /***** Elemente innerhalb von Form-Elemente ****/
 input, textarea, select, button {
   font-size: 1rem;
-  border: 0.5px solid black;
+  border: 0.03125rem solid black;
   padding: 0.2rem;
   border-radius: 0.3rem;
   outline: none;
@@ -49,8 +49,8 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.25;
   margin: 1rem;
+  text-align: center;
 }
 
 h1 {
@@ -70,7 +70,76 @@ p {
   max-width: 95%;
 }
 
-/***** Navigation ****/
+:root {
+  --first-color: $first-color;
+  --second-color: $second-color;
+  --third-color: $third-color;
+  --fourth-color: $fourth-color;
+  --dark-first-color: $dark-first-color;
+  --dark-second-color: $dark-second-color;
+  --dark-third-color: $dark-third-color;
+  --dark-fourth-color: $dark-fourth-color;
+  --font-base: $font-base;
+}
+
+header {
+  background-color: #5a7fb6;
+}
+
+body {
+  padding: 1rem;
+}
+
+article {
+  background-color: #e7eaf6;
+}
+
+article h2 {
+  background-color: #c9d1f6;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+#ali div,
+#einleitung div,
+#foreman div,
+#haft div,
+#tyson div,
+#form div {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+}
+#ali div > *,
+#einleitung div > *,
+#foreman div > *,
+#haft div > *,
+#tyson div > *,
+#form div > * {
+  flex: 1 0 30em;
+}
+
+img {
+  border: 0.625rem solid #5a7fb6;
+}
+
+th,
+td {
+  border: 0.125rem solid #185489;
+  padding: 1rem 1.5rem;
+}
+
+thead {
+  background-color: #5a7fb6;
+}
+
 nav > * {
   list-style: none;
   margin: 1.5rem;
@@ -79,67 +148,284 @@ nav > * {
 }
 
 nav {
-  position: sticky;
   top: 0;
+  border-color: black;
   background: hsl(0, 0%, 100%);
   z-index: 2;
 }
-
 nav ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+  list-style: none;
 }
-
-#einleitung > div {
-  display: flex;
-  flex-flow: row wrap;
+nav a {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #c9d1f6;
+  color: #185489;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.15);
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
-#einleitung > div * {
-  flex: 1 0 30em;
-}
-
-#tyson > div {
-  display: flex;
-  flex-flow: row wrap;
-}
-#tyson > div * {
-  flex: 1 0 30em;
-}
-
-#foreman > div {
-  display: flex;
-  flex-flow: row wrap;
-}
-#foreman > div * {
-  flex: 1 0 30em;
-}
-
-#haft > div {
-  display: flex;
-  flex-flow: row wrap;
-}
-#haft > div * {
-  flex: 1 0 30em;
-}
-
-#ali > div {
-  display: flex;
-  flex-flow: row wrap;
-}
-#ali > div * {
-  flex: 1 0 30em;
+nav a:hover {
+  background-color: white;
+  transform: scale(1.1);
 }
 
 #formular {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 0.625rem;
+  max-width: 100%;
+  width: 40rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #e7eaf6;
+  border: 0.125rem;
+  border-style: solid;
+  border-color: #5a7fb6;
+  border-radius: 0.625rem;
+}
+#formular form {
+  text-align: center;
+}
+#formular form fieldset {
+  border: none;
+}
+#formular form fieldset legend {
+  font-size: 1.8rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+#formular form fieldset label {
+  font-weight: bold;
+}
+#formular form input {
+  background-color: #5a7fb6;
+}
+#formular form input[type=text], #formular form input[type=number], #formular form input[type=email] {
+  padding: 4%;
+  border-radius: 0.9375rem;
+  font-size: 1rem;
+  width: 100%;
+  transition: border-color 0.3s;
+}
+#formular form input[type=submit] {
+  margin: 2%;
+  padding: 4%;
+  font-size: 1em;
+  border: none;
+  border-radius: 0.75rem;
+  width: 80%;
+  color: black;
+  background-color: #c9d1f6;
+}
+#formular form input[type=submit]:hover {
+  opacity: 0.9;
+}
+#formular form input[type=reset] {
+  margin: 2%;
+  padding: 4%;
+  font-size: 1em;
+  border: none;
+  border-radius: 0.75rem;
+  width: 80%;
+  color: black;
+  background-color: #c9d1f6;
+}
+#formular form input[type=reset]:hover {
+  opacity: 0.9;
+}
+#formular input::placeholder {
+  color: #e7eaf6;
+}
+#formular input[type=submit]:hover,
+#formular input[type=reset]:hover {
+  background-color: #185489;
 }
 
-a:hover {
-  color: hsl(228, 50%, 59%);
+.tabelle {
+  container-type: inline-size;
+  display: block;
+}
+.tabelle table {
+  width: 100%;
+  border-spacing: 0;
+}
+@container (max-width: 800px) {
+  .tabelle table,
+  .tabelle tbody,
+  .tabelle th,
+  .tabelle td,
+  .tabelle tr {
+    display: block;
+  }
+  .tabelle tr {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #ccc;
+  }
+  .tabelle td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+  }
+  .tabelle td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-align: left;
+    flex: 0 0 40%;
+    padding-right: 1rem;
+  }
+  .tabelle td:first-child {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #222;
+    padding-bottom: 0.5rem;
+  }
+  .tabelle td:first-child::before {
+    content: none;
+  }
+  .tabelle thead {
+    display: none;
+  }
+  .tabelle td[data-label=Boxer] {
+    background: #5a7fb6;
+  }
+}
+
+.ali,
+.tyson,
+.foreman,
+.haft,
+.einleitung,
+.artikel-text {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.ali.active,
+.tyson.active,
+.foreman.active,
+.haft.active,
+.einleitung.active,
+.artikel-text.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav a:hover {
   text-decoration: underline;
+  color: #185489;
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #102a43;
+  }
+  header {
+    background-color: #bcccdc;
+  }
+  nav {
+    background-color: #102a43;
+  }
+  article {
+    background-color: #486581;
+  }
+  article div {
+    background-color: #bcccdc;
+  }
+  article h2 {
+    background-color: #bcccdc;
+  }
+  img {
+    border: #486581;
+  }
+  nav a {
+    background-color: #bcccdc;
+    color: #102a43;
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+  }
+  nav a:hover {
+    text-decoration: underline;
+    color: #102a43;
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.15);
+  }
+  .tabelle table {
+    background-color: #f0f4f8;
+  }
+  .tabelle th,
+  .tabelle td {
+    color: #102a43;
+    background-color: #bcccdc;
+  }
+  .tabelle thead {
+    background-color: #486581;
+  }
+  .tabelle td::before {
+    color: #102a43;
+  }
+  .tabelle a {
+    background-color: #bcccdc;
+    color: #102a43;
+  }
+  #formular {
+    background-color: #f0f4f8;
+    border: 0.125rem;
+    border-style: solid;
+    border-color: #486581;
+    border-radius: 0.625rem;
+  }
+  #formular form fieldset legend {
+    color: #102a43;
+  }
+  #formular form fieldset label {
+    color: #102a43;
+  }
+  #formular form input {
+    background-color: #486581;
+    color: #f0f4f8;
+  }
+  #formular form input[type=text], #formular form input[type=number], #formular form input[type=email] {
+    border: 1px solid #102a43;
+  }
+  #formular form input[type=submit], #formular form input[type=reset] {
+    margin: 2%;
+    padding: 4%;
+    font-size: 1em;
+    border: none;
+    border-radius: 0.75rem;
+    width: 80%;
+    color: black;
+    background-color: #bcccdc;
+  }
+  #formular form input[type=submit]:hover, #formular form input[type=reset]:hover {
+    opacity: 0.9;
+  }
+  #formular input::placeholder {
+    color: #f0f4f8;
+  }
+  #formular input[type=submit]:hover,
+  #formular input[type=reset]:hover {
+    background-color: #102a43;
+    color: black;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,27 @@
+
+$first-color:  #e7eaf6;
+$second-color: #c9d1f6;
+$third-color:  #5a7fb6;
+$fourth-color: #185489;
+
+$dark-first-color:  #f0f4f8;  // sehr dunkler Hintergrund
+$dark-second-color: #bcccdc;  // dunkles Blau/Grau für Sekundärflächen
+$dark-third-color:  #486581;  // helles Blau für Akzente (Buttons)
+$dark-fourth-color: #102a43;  // hellblauer Text/Akzente
+
+// Schriftgrößen
+$font-base: 1rem;
+
+:root {
+    --first-color: $first-color;
+    --second-color: $second-color;
+    --third-color: $third-color; 
+    --fourth-color: $fourth-color; 
+
+    --dark-first-color: $dark-first-color;
+    --dark-second-color: $dark-second-color;
+    --dark-third-color: $dark-third-color;
+    --dark-fourth-color: $dark-fourth-color;
+    
+    --font-base: $font-base;
+}

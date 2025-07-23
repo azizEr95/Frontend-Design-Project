@@ -1,0 +1,5 @@
+@use "../base/variables";
+
+header {
+    background-color: variables.$third-color;
+}

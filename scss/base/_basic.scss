@@ -24,14 +24,14 @@ table {
 }
   
 th, td {
-    border: 2px solid black;
+    border: 0.125rem solid black;
     padding: 0.5rem;
 }
 
 /***** Elemente innerhalb von Form-Elemente ****/
 input, textarea, select, button {
     font-size: 1rem;
-    border: 0.5px solid black;
+    border: 0.03125rem solid black;
     padding: 0.2rem;
     border-radius: 0.3rem;
     outline: none;

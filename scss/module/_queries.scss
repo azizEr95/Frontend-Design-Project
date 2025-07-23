@@ -1,0 +1,63 @@
+@use "../base/variables";
+@use "../module/mixins";
+
+.tabelle {
+    container-type: inline-size;
+    display: block;
+
+    table {
+        width: 100%;
+        border-spacing: 0;
+    }
+
+    @container (max-width: 800px) {
+
+        table,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+
+        tr {
+            margin: 1rem 0;
+            padding: 1rem;
+            border: 1px solid #ccc;
+        }
+
+        td {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+        }
+
+        td::before {
+            content: attr(data-label);
+            font-weight: bold;
+            text-align: left;
+            flex: 0 0 40%;
+            padding-right: 1rem;
+        }
+
+        td:first-child {
+            display: block;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #222;
+            padding-bottom: 0.5rem;
+        }
+
+        td:first-child::before {
+            content: none; // kein Label vor dem Namen
+        }
+
+        thead {
+            display: none;
+        }
+
+        td[data-label="Boxer"] {
+            background: variables.$third-color;
+        }
+    }
+}
