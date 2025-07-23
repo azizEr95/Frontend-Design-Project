@@ -13,8 +13,3 @@ Dieses Projekt ist eine einfache Webseite, in der ich versuche die Front End Web
 ```bash
 git clone https://github.com/dein-nutzername/dein-repo.git
 ```
-
-## Webseite besuchen
-
-Unter diesem Link: 
-https://azizer95.github.io/Frontend-Design-Project/
